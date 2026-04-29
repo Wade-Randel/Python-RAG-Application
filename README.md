@@ -1,7 +1,7 @@
 # PDF RAG (Retrieval-Augmented Generation) System
 A comprehensive document question-answering system that processes PDF and DOCX files using ChromaDB vector storage and local LLM inference with Ollama.
 
-# 🚀 Features
+# Features
 Multi-format Support: Process both PDF and DOCX documents \
 Local LLM Integration: Uses Ollama with Llama 3.1 for privacy-focused inference \
 Vector Database: ChromaDB for efficient similarity search and document retrieval \
@@ -11,25 +11,25 @@ Similarity Filtering: Advanced retrieval with configurable similarity thresholds
 Source Attribution: Automatic citation of source documents and page numbers \
 Automatic Setup: Database initialization with error handling and status checking
 
-# 📋 Prerequisites
+# Prerequisites
 Required Software \
 Python 3.8+ \
 Ollama installed and running locally \
 Required Python packages (see Installation section) \
 Ollama Models
 
-# 🦙🧠 Install the LLM model (instruct = GPU Optimized models)
+# Install the LLM model (instruct = GPU Optimized models)
 ollama pull llama3.1 \
 ollama run llama3.2:1b-instruct-q4_0 \
 ollama run llama3.2:3b-instruct-q4_0
 
 
-# 🦙🔢 Install the embedding model (Light, Medium, Heavy)
+# Install the embedding model (Light, Medium, Heavy)
 ollama pull all-minilm \
 ollama pull nomic-embed-text \
 ollama pull mxbai-embed-large
 
-# 🐍 Installation
+# Installation
 Clone or download the project files \
 Install Python dependencies: \
 In a virtual environment run:
@@ -39,7 +39,7 @@ py -3 -m venv .venv  \
 
 pip install -r requirements.txt
 
-# ⚛️ Setting up React/Node.js
+# Setting up React/Node.js
 Install React dependencies: \
 cd frontend
 
@@ -47,7 +47,7 @@ Intall Node.js dependencies: \
 npm install
 
 
-# 🚀 Quick Start 🚀
+# Quick Start 
 1. Add Your Documents \
 Place your PDF and DOCX files in the documents/ directory:
 
@@ -56,31 +56,31 @@ documents/ \
 ├── manual.docx \
 └── report.pdf
 
-# ▶️ First, set up the database
+# First, set up the database
 python db_setup.py
 
-# 📟 Terminal 1 - Start the backend
+# Terminal 1 - Start the backend
 python server.py
 
-# 📟 Terminal 2 - Start the frontend  
+# Terminal 2 - Start the frontend  
 cd frontend \
 npm start
 
-# 🌐 Access the application at 
+# Access the application at 
 http://localhost:5000
 
-# ⚙️ Configuration
+# Configuration
 Found in config.py
 
-# 🔧 Advanced Features
+# Advanced Features
 Adding New Documents \
 The system automatically detects new files
 
-# 📂 Add new files to docs/ directory, then run:
+# Add new files to docs/ directory, then run:
 python db_setup.py
 
 
-# 📊 Performance Optimization
+# Performance Optimization
 Memory Management \
 Uses garbage collection (gc.collect()) after processing \
 Processes documents in configurable batches \
@@ -94,16 +94,16 @@ Incremental database updates \
 Persistent vector storage \
 Metadata-based file tracking
 
-# 🔒 Privacy & Security
+# Privacy & Security
 Fully Local: No data sent to external services \
 Ollama Integration: Local LLM inference only \
 Document Privacy: Files processed and stored locally \
 No API Keys: No external API dependencies \
 
-# 📄 License
+# License
 This project is provided as-is for educational and research purposes.
 
-# 🆘 Support
+# Support
 For issues and questions:
 
 Check the troubleshooting section above \
